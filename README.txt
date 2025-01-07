@@ -1,3 +1,7 @@
+-=(Astrocade_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound
+
 ---------------------------------------------------------------------------------
 -- 
 -- Arcade version of Astrocade for MiSTer - Mike Coates
