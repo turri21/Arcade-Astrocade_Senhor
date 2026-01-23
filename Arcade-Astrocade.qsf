@@ -17,9 +17,9 @@ set_global_assignment -name LAST_QUARTUS_VERSION "17.0.2 Lite Edition"
 
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name NUM_PARALLEL_PROCESSORS 8
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name SAVE_DISK_SPACE OFF
-set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 125
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -67,5 +67,34 @@ set_global_assignment -name VERILOG_MACRO "USE_SDRAM=1"
 source sys/sys.tcl
 source sys/sys_analog.tcl
 source files.qip
+set_global_assignment -name QIP_FILE rtl/T80/T80.qip
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/sdram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/ddram.sv
+set_global_assignment -name VHDL_FILE rtl/bally_rams.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_io.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_data.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_col_pal.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_pattern.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_addr.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_sparkle.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_starpos.vhd
+set_global_assignment -name VHDL_FILE rtl/bally_lamps.vhd
+set_global_assignment -name VHDL_FILE rtl/bram.vhd
+set_global_assignment -name VHDL_FILE rtl/bally.vhd
+set_global_assignment -name VHDL_FILE rtl/ebases_control.vhd
+set_global_assignment -name VHDL_FILE rtl/freeplay.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/gorf_samples.sv
+set_global_assignment -name VHDL_FILE rtl/gorf_samples_S.vhd
+set_global_assignment -name VHDL_FILE rtl/gorf_samples_D.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/wow_samples.sv
+set_global_assignment -name VHDL_FILE rtl/wow_samples_S.vhd
+set_global_assignment -name VHDL_FILE rtl/wow_samples_D.vhd
+set_global_assignment -name VHDL_FILE rtl/seawolf_gray_binary.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/seawolf_samples.sv
+set_global_assignment -name VHDL_FILE rtl/seawolf_samples_S.vhd
+set_global_assignment -name VHDL_FILE rtl/seawolf_samples_D.vhd
+set_global_assignment -name VHDL_FILE rtl/wow_control.vhd
+set_global_assignment -name VERILOG_FILE rtl/second_order_dac.v
+set_global_assignment -name SYSTEMVERILOG_FILE "Arcade-Astrocade.sv"
 
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
